@@ -1,4 +1,10 @@
-venv/
+# Ignore Python cache
 __pycache__/
 *.pyc
+
+# Ignore virtual environment
+venv/
+
+# Ignore system files
 .DS_Store
+.env
