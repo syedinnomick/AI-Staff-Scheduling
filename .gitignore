@@ -1,4 +1,16 @@
+# Python
 venv/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.db
+instance/
+
+# Node
+node_modules/
+dist/
+tailwindcss
+
+# OS
 .DS_Store

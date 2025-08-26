@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 from backend.db.connection import db
 from backend.routes.staff_routes import staff_bp
 from backend.routes.shift_routes import shift_bp
@@ -7,7 +8,7 @@ import os
 
 def create_app():
     app = Flask(__name__)
-
+    CORS(app) # Enable CORS for all routes
     db_url = os.getenv("DATABASE_URL", "sqlite:///scheduling.db")
     app.config.update(
         SQLALCHEMY_DATABASE_URI=db_url,
